@@ -1,0 +1,51 @@
+<html>
+  <head>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+   <body>
+
+      <i onclick="like()" class="fa fa-thumbs-up"></i> <span id="like"></span>   &nbsp;&nbsp;&nbsp;&nbsp; 
+      <div id="result"></div> 
+      <i  onclick="dislike()" class="fa fa-thumbs-down"></i> <span id="dislike"></span>
+
+      <script>
+         
+           var likes=0;
+           var dislikes=0;
+
+           function like(){
+               likes=likes+1;
+               document.getElementById('like').innerHTML=likes;
+               if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("like").innerHTML = "Liked " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("like").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+
+           }
+           function dislike(){
+             dislikes= dislikes +1;
+             document.getElementById('dislike').innerHTML=dislikes; 
+             if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("dislike").innerHTML = "Disliked " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("didlike").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+           }
+
+      </script>
+   </body>
+</html>

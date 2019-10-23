@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa-heart-o  {
+    color: red;
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+.fa-heart{
+    color: red;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+
+<p>Click on the icon:</p>
+
+<i onclick="myFunction(this)" class="fa fa-heart-o"></i>
+
+<script>
+function myFunction(x) {
+  x.classList.remove("fa-heart-o");
+  x.classList.add("fa-heart");
+}
+</script>
+
+</body>
+</html>
+
